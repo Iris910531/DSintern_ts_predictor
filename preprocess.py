@@ -8,7 +8,7 @@ def Preprocess(time_stamp):
     struct_time = time.localtime(time_stamp) # 轉成時間元組
     timeString = time.strftime("%Y%m%d%H%M%S", struct_time)
 
-    path = 'http://61.220.250.198:3000/getPingfongFamiSolarGeneration/?hour=600&unit=kwh&endTime='
+    path = 'API Secret Address'
     response = requests.get(path + timeString)
     if response.status_code != 200:
         print(response.status_code)
